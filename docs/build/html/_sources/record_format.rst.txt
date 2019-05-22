@@ -1,0 +1,26 @@
+=============================
+miniSQL Storage Specification
+=============================
+
+Records are stored in a database file, encoded as binary data.
+
+record storage format:
+::
+
+   <record_name>\t<a1>\t<a2>\t<a3>\t<a4>\r\n
+
+miniSQL data constraints:
+
++------------------+-----------+----------+
+|   storage type   | data type | max size |
++==================+===========+==========+
+|    field name    |  string   |   69 B   |
++------------------+-----------+----------+
+|    field data    |  integer  | 48 B * 4 |
++------------------+-----------+----------+
+|     tab char     |  string   | 50 B * 4 |
++------------------+-----------+----------+
+|   CRLF string    |  string   |   51 B   |
++------------------+-----------+----------+
+|    total record size         |   512 B  |
++------------------+-----------+----------+

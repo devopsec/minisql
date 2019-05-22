@@ -1,0 +1,1621 @@
+---------------------------------- page 1 ----------------------------------
+#### DownExpandingContainer('title')
+  Paragraph('miniSQL Documentation', style='title page title')
+       > (0,0,1,0,2) title page title
+         (0,0,0,0,2) body
+    SingleStyledText('miniSQL Documentation')
+  Paragraph('Release 1.0.0', style='title page subtitle')
+       > (0,0,1,0,2) title page subtitle
+         (0,0,0,0,2) body
+    SingleStyledText('Release 1.0.0')
+  Paragraph('DevOpSec', style='title page author')
+       > (0,0,1,0,2) title page author
+         (0,0,0,0,2) body
+    SingleStyledText('DevOpSec')
+  Paragraph('May 05, 2019', style='title page date')
+       > (0,0,1,0,2) title page date
+         (0,0,0,0,2) body
+    SingleStyledText('May 05, 2019')
+---------------------------------- page i ----------------------------------
+#### FlowablesContainer('chapter title')
+  Paragraph('Table of Contents', style='front matter section title')
+       > (0,0,1,0,2) front matter section title
+         (0,0,0,0,2) body
+    Field('Table of Contents')
+      SingleStyledText('Table of Contents')
+#### ChainedContainer('column1')
+  TableOfContentsSection(style='table of contents')
+       > (0,0,1,0,1) table of contents section
+         (0,0,0,1,1) chapter
+    TableOfContents()   table of contents
+         > (0,0,0,0,2) table of contents
+      TableOfContentsEntry('1	miniSQL main	1')
+           > (0,0,0,1,2) toc level 1
+          MixedStyledText('1	miniSQL main	1')
+            ReferenceField('1')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+            Tab('	')
+            ReferenceField('miniSQL main')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('miniSQL main')
+            Tab('	')
+            ReferenceField('1')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      TableOfContentsEntry('2	Indices and tables	3')
+           > (0,0,0,1,2) toc level 1
+          MixedStyledText('2	Indices and tables	3')
+            ReferenceField('2')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+            Tab('	')
+            ReferenceField('Indices and tables')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('Indices and tables')
+            Tab('	')
+            ReferenceField('3')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('3')
+      TableOfContentsEntry('	Python Module Index	5')
+           > (0,0,0,1,2) toc level 1
+          MixedStyledText('	Python Module Index	5')
+            ReferenceField('')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('')
+            Tab('	')
+            ReferenceField('Python Module Index')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('Python Module Index')
+            Tab('	')
+            ReferenceField('5')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('5')
+      TableOfContentsEntry('	Index	7')
+           > (0,0,0,1,2) toc level 1
+          MixedStyledText('	Index	7')
+            ReferenceField('')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('')
+            Tab('	')
+            ReferenceField('Index')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('Index')
+            Tab('	')
+            ReferenceField('7')
+                 x (0,0,0,1,3) toc linked reference
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('7')
+#### DownExpandingContainer('footer')
+  Footer('		i')
+       > (0,0,0,0,2) footer
+         (0,0,0,0,1) body
+    MixedStyledText('		i')
+      Tab('	')
+      Tab('	')
+      Field('i')
+        SingleStyledText('i')
+---------------------------------- page 1 ----------------------------------
+#### FlowablesContainer('chapter title')
+  Paragraph('CHAPTER 1', style='body matter chapter label')
+       > (0,0,1,0,2) body matter chapter label
+         (0,0,0,0,2) body
+    MixedStyledText('CHAPTER 1')
+      MixedStyledText('CHAPTER ')
+        StringField('CHAPTER')
+        SingleStyledText(' ')
+      Field('1', style='number')
+           > (0,0,2,0,3) body matter chapter number
+        SingleStyledText('1')
+  Paragraph('miniSQL main', style='body matter chapter title')
+       > (0,0,1,0,2) body matter chapter title
+         (0,0,0,0,2) body
+    Field('miniSQL main')
+      SingleStyledText('miniSQL main')
+#### ChainedContainer('column1')
+  DocumentTree()
+    StaticGroupedFlowables()   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:0 <compound>
+    Section(id='module-minisql')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:8 <section>
+         > (0,0,0,1,2) chapter
+      LabeledFlowable(style='object description')   None:None <desc>
+           > (0,0,1,0,2) object description
+        StaticGroupedFlowables(style='signatures')
+             > (0,0,2,0,3) object signatures
+          Paragraph('class minisql.MinisqlShell ( com...', id='minisql.MinisqlShell')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell:None <desc_signature>
+               > (0,0,2,0,5) object signature
+                 (0,0,0,0,2) body
+            MixedStyledText('class minisql.MinisqlShell ( com...')
+              MixedStyledText('class ', style='annotation')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell:None <desc_annotation>
+                   > (0,0,3,0,6) object annotation
+                SingleStyledText('class ')
+              MixedStyledText('minisql.', style='additional name part')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell:None <desc_addname>
+                   > (0,0,3,0,6) additional name part
+                SingleStyledText('minisql.')
+              MixedStyledText('MinisqlShell', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell:None <desc_name>
+                   > (0,0,3,0,6) object name
+                SingleStyledText('MinisqlShell')
+              MixedStyledText(' ( completekey='tab', stdin=None...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell:None <desc_parameterlist>
+                MixedStyledText(' ( completekey='tab', stdin=None...')
+                  SingleStyledText(' ( ', style='parentheses')
+                       > (0,0,3,0,6) object parentheses
+                  MixedStyledText('completekey='tab', stdin=None, s...', style='parameter list')
+                       > (0,0,3,0,6) object parameter list
+                    MixedStyledText('completekey='tab'', style='parameter')   None:None <desc_parameter>
+                         > (0,0,3,0,6) object parameter
+                      SingleStyledText('completekey='tab'')
+                    SingleStyledText(', ')
+                    MixedStyledText('stdin=None', style='parameter')   None:None <desc_parameter>
+                         > (0,0,3,0,6) object parameter
+                      SingleStyledText('stdin=None')
+                    SingleStyledText(', ')
+                    MixedStyledText('stdout=None', style='parameter')   None:None <desc_parameter>
+                         > (0,0,3,0,6) object parameter
+                      SingleStyledText('stdout=None')
+                SingleStyledText(' ) ', style='parentheses')
+                     > (0,0,3,0,6) object parentheses
+        StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell:None <desc_content>
+             > (0,0,2,0,3) object description content
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_bye:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_bye ( arg ) ', id='minisql.MinisqlShell.do_bye')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_bye:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_bye ( arg ) ')
+                  MixedStyledText('do_bye', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_bye:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_bye')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_bye:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_bye:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Stop recording, close the turtle...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_bye:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Stop recording, close the turtle...')
+                  SingleStyledText('Stop recording, close the turtle...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_circle:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_circle ( arg ) ', id='minisql.MinisqlShell.do_circle')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_circle:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_circle ( arg ) ')
+                  MixedStyledText('do_circle', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_circle:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_circle')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_circle:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_circle:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Draw circle with given radius an...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_circle:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Draw circle with given radius an...')
+                  SingleStyledText('Draw circle with given radius an...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_color:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_color ( arg ) ', id='minisql.MinisqlShell.do_color')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_color:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_color ( arg ) ')
+                  MixedStyledText('do_color', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_color:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_color')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_color:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_color:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Set the color:  COLOR BLUE')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_color:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Set the color:  COLOR BLUE')
+                  SingleStyledText('Set the color:  COLOR BLUE')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_forward:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_forward ( arg ) ', id='minisql.MinisqlShell.do_forward')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_forward:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_forward ( arg ) ')
+                  MixedStyledText('do_forward', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_forward:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_forward')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_forward:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_forward:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Move the turtle forward by the s...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_forward:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Move the turtle forward by the s...')
+                  SingleStyledText('Move the turtle forward by the s...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_goto:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_goto ( arg ) ', id='minisql.MinisqlShell.do_goto')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_goto:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_goto ( arg ) ')
+                  MixedStyledText('do_goto', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_goto:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_goto')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_goto:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_goto:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Move turtle to an absolute posit...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_goto:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Move turtle to an absolute posit...')
+                  SingleStyledText('Move turtle to an absolute posit...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_heading:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_heading ( arg ) ', id='minisql.MinisqlShell.do_heading')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_heading:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_heading ( arg ) ')
+                  MixedStyledText('do_heading', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_heading:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_heading')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_heading:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_heading:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Print the current turtle heading...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_heading:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Print the current turtle heading...')
+                  SingleStyledText('Print the current turtle heading...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_home:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_home ( arg ) ', id='minisql.MinisqlShell.do_home')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_home:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_home ( arg ) ')
+                  MixedStyledText('do_home', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_home:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_home')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_home:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_home:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Return turtle to the home positi...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_home:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Return turtle to the home positi...')
+                  SingleStyledText('Return turtle to the home positi...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_left:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_left ( arg ) ', id='minisql.MinisqlShell.do_left')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_left:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_left ( arg ) ')
+                  MixedStyledText('do_left', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_left:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_left')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_left:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_left:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Turn turtle left by given number...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_left:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Turn turtle left by given number...')
+                  SingleStyledText('Turn turtle left by given number...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_playback:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_playback ( arg ) ', id='minisql.MinisqlShell.do_playback')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_playback:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_playback ( arg ) ')
+                  MixedStyledText('do_playback', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_playback:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_playback')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_playback:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_playback:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Playback commands from a file:  ...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_playback:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Playback commands from a file:  ...')
+                  SingleStyledText('Playback commands from a file:  ...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_position:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_position ( arg ) ', id='minisql.MinisqlShell.do_position')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_position:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_position ( arg ) ')
+                  MixedStyledText('do_position', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_position:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_position')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_position:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_position:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Print the current turtle positio...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_position:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Print the current turtle positio...')
+                  SingleStyledText('Print the current turtle positio...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_record:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_record ( arg ) ', id='minisql.MinisqlShell.do_record')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_record:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_record ( arg ) ')
+                  MixedStyledText('do_record', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_record:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_record')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_record:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_record:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Save future commands to filename...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_record:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Save future commands to filename...')
+                  SingleStyledText('Save future commands to filename...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_reset:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_reset ( arg ) ', id='minisql.MinisqlShell.do_reset')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_reset:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_reset ( arg ) ')
+                  MixedStyledText('do_reset', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_reset:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_reset')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_reset:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_reset:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Clear the screen and return turt...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_reset:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Clear the screen and return turt...')
+                  SingleStyledText('Clear the screen and return turt...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_right:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_right ( arg ) ', id='minisql.MinisqlShell.do_right')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_right:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_right ( arg ) ')
+                  MixedStyledText('do_right', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_right:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_right')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_right:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_right:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Turn turtle right by given numbe...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_right:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Turn turtle right by given numbe...')
+                  SingleStyledText('Turn turtle right by given numbe...')
+#### DownExpandingContainer('footer')
+  Footer('		1')
+       > (0,0,0,0,2) footer
+         (0,0,0,0,1) body
+    MixedStyledText('		1')
+      Tab('	')
+      Tab('	')
+      Field('1')
+        SingleStyledText('1')
+---------------------------------- page 2 ----------------------------------
+#### ChainedContainer('column1')
+  (continued) DocumentTree()
+    (continued) Section(id='module-minisql')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:8 <section>
+         > (0,0,0,1,2) chapter
+      (continued) LabeledFlowable(style='object description')   None:None <desc>
+           > (0,0,1,0,2) object description
+        (continued) StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell:None <desc_content>
+             > (0,0,2,0,3) object description content
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_undo:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('do_undo ( arg ) ', id='minisql.MinisqlShell.do_undo')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_undo:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('do_undo ( arg ) ')
+                  MixedStyledText('do_undo', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_undo:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('do_undo')
+                  MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_undo:None <desc_parameterlist>
+                    MixedStyledText(' ( arg')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('arg', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('arg')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_undo:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Undo (repeatedly) the last turtl...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.do_undo:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Undo (repeatedly) the last turtl...')
+                  SingleStyledText('Undo (repeatedly) the last turtl...')
+          LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.precmd:None <desc>
+               > (0,0,1,0,2) object description
+            StaticGroupedFlowables(style='signatures')
+                 > (0,0,2,0,3) object signatures
+              Paragraph('precmd ( line ) ', id='minisql.MinisqlShell.precmd')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.precmd:None <desc_signature>
+                   > (0,0,2,0,5) object signature
+                     (0,0,0,0,2) body
+                MixedStyledText('precmd ( line ) ')
+                  MixedStyledText('precmd', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.precmd:None <desc_name>
+                       > (0,0,3,0,6) object name
+                    SingleStyledText('precmd')
+                  MixedStyledText(' ( line ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.precmd:None <desc_parameterlist>
+                    MixedStyledText(' ( line')
+                      SingleStyledText(' ( ', style='parentheses')
+                           > (0,0,3,0,6) object parentheses
+                      MixedStyledText('line', style='parameter list')
+                           > (0,0,3,0,6) object parameter list
+                        MixedStyledText('line', style='parameter')   None:None <desc_parameter>
+                             > (0,0,3,0,6) object parameter
+                          SingleStyledText('line')
+                    SingleStyledText(' ) ', style='parentheses')
+                         > (0,0,3,0,6) object parentheses
+            StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.precmd:None <desc_content>
+                 > (0,0,2,0,3) object description content
+              Paragraph('Hook method executed just before...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.MinisqlShell.precmd:1 <paragraph>
+                   > (0,0,2,0,5) object description content paragraph
+                     (0,0,0,0,2) body
+                MixedStyledText('Hook method executed just before...')
+                  SingleStyledText('Hook method executed just before...')
+      LabeledFlowable(style='object description')   None:None <desc>
+           > (0,0,1,0,2) object description
+        StaticGroupedFlowables(style='signatures')
+             > (0,0,2,0,3) object signatures
+          Paragraph('minisql.interpretQueries ( queri...', id='minisql.interpretQueries')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:None <desc_signature>
+               > (0,0,2,0,5) object signature
+                 (0,0,0,0,2) body
+            MixedStyledText('minisql.interpretQueries ( queri...')
+              MixedStyledText('minisql.', style='additional name part')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:None <desc_addname>
+                   > (0,0,3,0,6) additional name part
+                SingleStyledText('minisql.')
+              MixedStyledText('interpretQueries', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:None <desc_name>
+                   > (0,0,3,0,6) object name
+                SingleStyledText('interpretQueries')
+              MixedStyledText(' ( queries ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:None <desc_parameterlist>
+                MixedStyledText(' ( queries')
+                  SingleStyledText(' ( ', style='parentheses')
+                       > (0,0,3,0,6) object parentheses
+                  MixedStyledText('queries', style='parameter list')
+                       > (0,0,3,0,6) object parameter list
+                    MixedStyledText('queries', style='parameter')   None:None <desc_parameter>
+                         > (0,0,3,0,6) object parameter
+                      SingleStyledText('queries')
+                SingleStyledText(' ) ', style='parentheses')
+                     > (0,0,3,0,6) object parentheses
+        StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:None <desc_content>
+             > (0,0,2,0,3) object description content
+          Paragraph('Interpret queries as a list of c...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:1 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Interpret queries as a list of c...')
+              SingleStyledText('Interpret queries as a list of c...')
+          DefinitionList(style='field list')   None:None <field_list>
+               > (0,0,1,0,2) field list
+                 (0,0,0,0,2) definition list
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Parameters', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Parameters')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:0 <field_name>
+                  SingleStyledText('Parameters')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('queries – list of queries to pro...')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('queries – list of queries to pro...')
+                    MixedStyledText('queries', style='literal strong')   None:None <literal_strong>
+                         > (0,0,1,0,1) literal strong
+                      SingleStyledText('queries')
+                    SingleStyledText(' – ')
+                    SingleStyledText('list of queries to process')
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Returns', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Returns')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.interpretQueries:0 <field_name>
+                  SingleStyledText('Returns')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('False to exit, True to continue ...')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('False to exit, True to continue ...')
+                    SingleStyledText('False to exit, True to continue ...')
+      LabeledFlowable(style='object description')   None:None <desc>
+           > (0,0,1,0,2) object description
+        StaticGroupedFlowables(style='signatures')
+             > (0,0,2,0,3) object signatures
+          Paragraph('minisql.main (  ) ', id='minisql.main')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.main:None <desc_signature>
+               > (0,0,2,0,5) object signature
+                 (0,0,0,0,2) body
+            MixedStyledText('minisql.main (  ) ')
+              MixedStyledText('minisql.', style='additional name part')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.main:None <desc_addname>
+                   > (0,0,3,0,6) additional name part
+                SingleStyledText('minisql.')
+              MixedStyledText('main', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.main:None <desc_name>
+                   > (0,0,3,0,6) object name
+                SingleStyledText('main')
+              MixedStyledText(' (  ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.main:None <desc_parameterlist>
+                MixedStyledText(' ( ')
+                  SingleStyledText(' ( ', style='parentheses')
+                       > (0,0,3,0,6) object parentheses
+                  MixedStyledText('', style='parameter list')
+                       > (0,0,3,0,6) object parameter list
+                SingleStyledText(' ) ', style='parentheses')
+                     > (0,0,3,0,6) object parentheses
+        StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.main:None <desc_content>
+             > (0,0,2,0,3) object description content
+          Paragraph('Parse command line arguments and...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.main:1 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Parse command line arguments and...')
+              SingleStyledText('Parse command line arguments and...')
+          DefinitionList(style='field list')   None:None <field_list>
+               > (0,0,1,0,2) field list
+                 (0,0,0,0,2) definition list
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Returns', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Returns')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.main:0 <field_name>
+                  SingleStyledText('Returns')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('0 on success, 1 on failure')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('0 on success, 1 on failure')
+                    SingleStyledText('0 on success, 1 on failure')
+      LabeledFlowable(style='object description')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parse:None <desc>
+           > (0,0,1,0,2) object description
+        StaticGroupedFlowables(style='signatures')
+             > (0,0,2,0,3) object signatures
+          Paragraph('minisql.parse ( arg ) ', id='minisql.parse')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parse:None <desc_signature>
+               > (0,0,2,0,5) object signature
+                 (0,0,0,0,2) body
+            MixedStyledText('minisql.parse ( arg ) ')
+              MixedStyledText('minisql.', style='additional name part')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parse:None <desc_addname>
+                   > (0,0,3,0,6) additional name part
+                SingleStyledText('minisql.')
+              MixedStyledText('parse', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parse:None <desc_name>
+                   > (0,0,3,0,6) object name
+                SingleStyledText('parse')
+              MixedStyledText(' ( arg ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parse:None <desc_parameterlist>
+                MixedStyledText(' ( arg')
+                  SingleStyledText(' ( ', style='parentheses')
+                       > (0,0,3,0,6) object parentheses
+                  MixedStyledText('arg', style='parameter list')
+                       > (0,0,3,0,6) object parameter list
+                    MixedStyledText('arg', style='parameter')   None:None <desc_parameter>
+                         > (0,0,3,0,6) object parameter
+                      SingleStyledText('arg')
+                SingleStyledText(' ) ', style='parentheses')
+                     > (0,0,3,0,6) object parentheses
+        StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parse:None <desc_content>
+             > (0,0,2,0,3) object description content
+          Paragraph('Convert a series of zero or more...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parse:1 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Convert a series of zero or more...')
+              SingleStyledText('Convert a series of zero or more...')
+      LabeledFlowable(style='object description')   None:None <desc>
+           > (0,0,1,0,2) object description
+        StaticGroupedFlowables(style='signatures')
+             > (0,0,2,0,3) object signatures
+          Paragraph('minisql.parseQueries ( raw_queri...', id='minisql.parseQueries')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:None <desc_signature>
+               > (0,0,2,0,5) object signature
+                 (0,0,0,0,2) body
+            MixedStyledText('minisql.parseQueries ( raw_queri...')
+              MixedStyledText('minisql.', style='additional name part')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:None <desc_addname>
+                   > (0,0,3,0,6) additional name part
+                SingleStyledText('minisql.')
+              MixedStyledText('parseQueries', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:None <desc_name>
+                   > (0,0,3,0,6) object name
+                SingleStyledText('parseQueries')
+              MixedStyledText(' ( raw_queries ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:None <desc_parameterlist>
+                MixedStyledText(' ( raw_queries')
+                  SingleStyledText(' ( ', style='parentheses')
+                       > (0,0,3,0,6) object parentheses
+                  MixedStyledText('raw_queries', style='parameter list')
+                       > (0,0,3,0,6) object parameter list
+                    MixedStyledText('raw_queries', style='parameter')   None:None <desc_parameter>
+                         > (0,0,3,0,6) object parameter
+                      SingleStyledText('raw_queries')
+                SingleStyledText(' ) ', style='parentheses')
+                     > (0,0,3,0,6) object parentheses
+        StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:None <desc_content>
+             > (0,0,2,0,3) object description content
+          Paragraph('Parse input into interpretable q...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:1 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Parse input into interpretable q...')
+              SingleStyledText('Parse input into interpretable q...')
+          Paragraph('Queries are delimited by a semic...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:3 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Queries are delimited by a semic...')
+              SingleStyledText('Queries are delimited by a semic...')
+          DefinitionList(style='field list')   None:None <field_list>
+               > (0,0,1,0,2) field list
+                 (0,0,0,0,2) definition list
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Parameters', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Parameters')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:0 <field_name>
+                  SingleStyledText('Parameters')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('raw_queries – command string inp...')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('raw_queries – command string inp...')
+                    MixedStyledText('raw_queries', style='literal strong')   None:None <literal_strong>
+                         > (0,0,1,0,1) literal strong
+                      SingleStyledText('raw_queries')
+                    SingleStyledText(' – ')
+                    SingleStyledText('command string input')
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Returns', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Returns')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.parseQueries:0 <field_name>
+                  SingleStyledText('Returns')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('list of queries (each as a list ...')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('list of queries (each as a list ...')
+                    SingleStyledText('list of queries (each as a list ...')
+      LabeledFlowable(style='object description')   None:None <desc>
+           > (0,0,1,0,2) object description
+        StaticGroupedFlowables(style='signatures')
+             > (0,0,2,0,3) object signatures
+          Paragraph('minisql.supportsColor ( stream )...', id='minisql.supportsColor')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:None <desc_signature>
+               > (0,0,2,0,5) object signature
+                 (0,0,0,0,2) body
+            MixedStyledText('minisql.supportsColor ( stream )...')
+              MixedStyledText('minisql.', style='additional name part')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:None <desc_addname>
+                   > (0,0,3,0,6) additional name part
+                SingleStyledText('minisql.')
+              MixedStyledText('supportsColor', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:None <desc_name>
+                   > (0,0,3,0,6) object name
+                SingleStyledText('supportsColor')
+              MixedStyledText(' ( stream ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:None <desc_parameterlist>
+                MixedStyledText(' ( stream')
+                  SingleStyledText(' ( ', style='parentheses')
+                       > (0,0,3,0,6) object parentheses
+                  MixedStyledText('stream', style='parameter list')
+                       > (0,0,3,0,6) object parameter list
+                    MixedStyledText('stream', style='parameter')   None:None <desc_parameter>
+                         > (0,0,3,0,6) object parameter
+                      SingleStyledText('stream')
+                SingleStyledText(' ) ', style='parentheses')
+                     > (0,0,3,0,6) object parentheses
+        StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:None <desc_content>
+             > (0,0,2,0,3) object description content
+          Paragraph('Check if terminal supports ASCII...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:1 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Check if terminal supports ASCII...')
+              SingleStyledText('Check if terminal supports ASCII...')
+          DefinitionList(style='field list')   None:None <field_list>
+               > (0,0,1,0,2) field list
+                 (0,0,0,0,2) definition list
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Parameters', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Parameters')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:0 <field_name>
+                  SingleStyledText('Parameters')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('stream – file stream to check')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('stream – file stream to check')
+                    MixedStyledText('stream', style='literal strong')   None:None <literal_strong>
+                         > (0,0,1,0,1) literal strong
+                      SingleStyledText('stream')
+                    SingleStyledText(' – ')
+                    SingleStyledText('file stream to check')
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Returns', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Returns')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.supportsColor:0 <field_name>
+                  SingleStyledText('Returns')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('True == supported, False == not ...')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('True == supported, False == not ...')
+                    SingleStyledText('True == supported, False == not ...')
+      LabeledFlowable(style='object description')   None:None <desc>
+           > (0,0,1,0,2) object description
+        StaticGroupedFlowables(style='signatures')
+             > (0,0,2,0,3) object signatures
+          Paragraph('minisql.validateStdinReadable ( ...', id='minisql.validateStdinReadable')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:None <desc_signature>
+               > (0,0,2,0,5) object signature
+                 (0,0,0,0,2) body
+            MixedStyledText('minisql.validateStdinReadable ( ...')
+              MixedStyledText('minisql.', style='additional name part')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:None <desc_addname>
+                   > (0,0,3,0,6) additional name part
+                SingleStyledText('minisql.')
+              MixedStyledText('validateStdinReadable', style='main object name')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:None <desc_name>
+                   > (0,0,3,0,6) object name
+                SingleStyledText('validateStdinReadable')
+              MixedStyledText(' (  ) ')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:None <desc_parameterlist>
+                MixedStyledText(' ( ')
+                  SingleStyledText(' ( ', style='parentheses')
+                       > (0,0,3,0,6) object parentheses
+                  MixedStyledText('', style='parameter list')
+                       > (0,0,3,0,6) object parameter list
+                SingleStyledText(' ) ', style='parentheses')
+                     > (0,0,3,0,6) object parentheses
+        StaticGroupedFlowables(style='content')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:None <desc_content>
+             > (0,0,2,0,3) object description content
+          Paragraph('Check if stdin has been redirect...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:1 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Check if stdin has been redirect...')
+              SingleStyledText('Check if stdin has been redirect...')
+          Paragraph('See the following table for supp...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:4 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('See the following table for supp...')
+              SingleStyledText('See the following table for supp...')
+          Paragraph('Note that as of python v3.3 syml...')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:6 <paragraph>
+               > (0,0,2,0,5) object description content paragraph
+                 (0,0,0,0,2) body
+            MixedStyledText('Note that as of python v3.3 syml...')
+              SingleStyledText('Note that as of python v3.3 syml...')
+          Table()   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:None <table>
+               > (0,0,0,0,2) table
+            TableHead()
+              TableRow()
+                TableCell()   None:None <entry>
+                     x (0,0,0,0,8) table head cell
+                     > (0,0,0,0,7) table cell
+                  Paragraph('Stdin Type')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:9 <paragraph>
+                       > (0,0,0,0,10) table head cell paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('Stdin Type')
+                      SingleStyledText('Stdin Type')
+                  TableCellBackground()
+                TableCell()   None:None <entry>
+                     x (0,0,0,0,8) table head cell
+                     > (0,0,0,0,7) table cell
+                  Paragraph('Supported')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:9 <paragraph>
+                       > (0,0,0,0,10) table head cell paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('Supported')
+                      SingleStyledText('Supported')
+                  TableCellBackground()
+                TableCell()   None:None <entry>
+                     x (0,0,0,0,8) table head cell
+                     > (0,0,0,0,7) table cell
+                  Paragraph('Program Context')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:9 <paragraph>
+                       > (0,0,0,0,10) table head cell paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('Program Context')
+                      SingleStyledText('Program Context')
+                  TableCellBackground()
+            TableBody()
+              TableRow()
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('directory')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:11 <paragraph>
+                       > (0,0,0,1,8) table first column paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('directory')
+                      SingleStyledText('directory')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('no')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:11 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('no')
+                      SingleStyledText('no')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+              TableRow()
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('keyboard')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:13 <paragraph>
+                       > (0,0,0,1,8) table first column paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('keyboard')
+                      SingleStyledText('keyboard')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('yes')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:13 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('yes')
+                      SingleStyledText('yes')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('miniSQL shell')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:13 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('miniSQL shell')
+                      SingleStyledText('miniSQL shell')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+              TableRow()
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('storage')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:15 <paragraph>
+                       > (0,0,0,1,8) table first column paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('storage')
+                      SingleStyledText('storage')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('no')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:15 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('no')
+                      SingleStyledText('no')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+              TableRow()
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('file')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:17 <paragraph>
+                       > (0,0,0,1,8) table first column paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('file')
+                      SingleStyledText('file')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('yes')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:17 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('yes')
+                      SingleStyledText('yes')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('miniSQL cmd')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:17 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('miniSQL cmd')
+                      SingleStyledText('miniSQL cmd')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+              TableRow()
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('symlink')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:19 <paragraph>
+                       > (0,0,0,1,8) table first column paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('symlink')
+                      SingleStyledText('symlink')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('no')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:19 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('no')
+                      SingleStyledText('no')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+              TableRow()
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('pipe')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:21 <paragraph>
+                       > (0,0,0,1,8) table first column paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('pipe')
+                      SingleStyledText('pipe')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('yes')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:21 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('yes')
+                      SingleStyledText('yes')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('miniSQL cmd')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:21 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('miniSQL cmd')
+                      SingleStyledText('miniSQL cmd')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on even row
+                       > fallback to default style
+              TableRow()
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('socket')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:23 <paragraph>
+                       > (0,0,0,1,8) table first column paragraph
+                         (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('socket')
+                      SingleStyledText('socket')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  Paragraph('no')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:23 <paragraph>
+                       > (0,0,0,0,9) table body cell paragraph
+                         (0,0,0,0,2) body
+                    MixedStyledText('no')
+                      SingleStyledText('no')
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+                TableCell()   None:None <entry>
+                     > (0,0,0,0,7) table cell
+                  TableCellBackground()
+                       x (0,0,0,2,8) table body cell background on odd row
+                       > fallback to default style
+          DefinitionList(style='field list')   None:None <field_list>
+               > (0,0,1,0,2) field list
+                 (0,0,0,0,2) definition list
+            LabeledFlowable()   None:None <field>
+                 > (0,0,1,0,4) field list item
+                   (0,0,0,0,4) definition list item
+              Paragraph('Returns', style='field name')
+                   > (0,0,2,0,6) field name
+                     (0,0,0,0,2) body
+                MixedStyledText('Returns')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/minisql.py:docstring of minisql.validateStdinReadable:0 <field_name>
+                  SingleStyledText('Returns')
+              StaticGroupedFlowables()   None:None <field_body>
+                Paragraph('not readable == -1, 0 == readabl...')   None:None <paragraph>
+                     > (0,0,0,0,2) body
+                  MixedStyledText('not readable == -1, 0 == readabl...')
+                    SingleStyledText('not readable == -1, 0 == readabl...')
+#### UpExpandingContainer('header')
+  Header('miniSQL Documentation, Release 1...')
+       > (0,0,0,0,2) header
+         (0,0,0,0,1) body
+    MixedStyledText('miniSQL Documentation, Release 1...')
+      Field('miniSQL Documentation')
+        SingleStyledText('miniSQL Documentation')
+      SingleStyledText(', ')
+      Field('Release 1.0.0')
+        SingleStyledText('Release 1.0.0')
+#### DownExpandingContainer('footer')
+  Footer('2		Chapter 1.  miniSQL main')
+       > (0,0,0,0,2) footer
+         (0,0,0,0,1) body
+    MixedStyledText('2		Chapter 1.  miniSQL main')
+      Field('2')
+        SingleStyledText('2')
+      Tab('	')
+      Tab('	')
+      StringField('Chapter')
+      SingleStyledText(' ')
+      Field('1')
+        SingleStyledText('1')
+      SingleStyledText('.  ')
+      Field('miniSQL main')
+        SingleStyledText('miniSQL main')
+---------------------------------- page 3 ----------------------------------
+#### FlowablesContainer('chapter title')
+  Paragraph('CHAPTER 2', style='body matter chapter label')
+       > (0,0,1,0,2) body matter chapter label
+         (0,0,0,0,2) body
+    MixedStyledText('CHAPTER 2')
+      MixedStyledText('CHAPTER ')
+        StringField('CHAPTER')
+        SingleStyledText(' ')
+      Field('2', style='number')
+           > (0,0,2,0,3) body matter chapter number
+        SingleStyledText('2')
+  Paragraph('Indices and tables', style='body matter chapter title')
+       > (0,0,1,0,2) body matter chapter title
+         (0,0,0,0,2) body
+    Field('Indices and tables')
+      SingleStyledText('Indices and tables')
+#### ChainedContainer('column1')
+  (continued) DocumentTree()
+    Section(id='indices-and-tables')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:13 <section>
+         > (0,0,0,1,2) chapter
+      List(style='bulleted')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:14 <bullet_list>
+           > (0,0,1,0,2) bulleted list
+        ListItem()
+             x (0,0,1,0,4) bulleted list item
+             > fallback to default style
+          ListItemLabel('•')
+               > (0,0,1,0,6) bulleted list item label
+                 (0,0,0,0,2) list item label
+              MixedStyledText('•')
+                SingleStyledText('')
+                SingleStyledText('•')
+                SingleStyledText('')
+          StaticGroupedFlowables()   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:None <list_item>
+               > (0,0,0,0,3) list item body
+            Paragraph('Index')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:14 <paragraph>
+                 > (0,0,0,0,5) list item paragraph
+                   (0,0,0,0,2) body
+              MixedStyledText('Index')
+                AnnotatedText('Index', style='internal link')   None:None <reference>
+                     > (0,0,1,0,1) internal hyperlink
+                  MixedStyledText('Index')
+                    MixedStyledText('Index')   None:None <inline>
+                      SingleStyledText('Index')
+        ListItem()
+             x (0,0,1,0,4) bulleted list item
+             > fallback to default style
+          ListItemLabel('•')
+               > (0,0,1,0,6) bulleted list item label
+                 (0,0,0,0,2) list item label
+              MixedStyledText('•')
+                SingleStyledText('')
+                SingleStyledText('•')
+                SingleStyledText('')
+          StaticGroupedFlowables()   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:None <list_item>
+               > (0,0,0,0,3) list item body
+            Paragraph('Module Index')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:15 <paragraph>
+                 > (0,0,0,0,5) list item paragraph
+                   (0,0,0,0,2) body
+              MixedStyledText('Module Index')
+                AnnotatedText('Module Index', style='internal link')   None:None <reference>
+                     > (0,0,1,0,1) internal hyperlink
+                  MixedStyledText('Module Index')
+                    MixedStyledText('Module Index')   None:None <inline>
+                      SingleStyledText('Module Index')
+        ListItem()
+             x (0,0,1,0,4) bulleted list item
+             > fallback to default style
+          ListItemLabel('•')
+               > (0,0,1,0,6) bulleted list item label
+                 (0,0,0,0,2) list item label
+              MixedStyledText('•')
+                SingleStyledText('')
+                SingleStyledText('•')
+                SingleStyledText('')
+          StaticGroupedFlowables()   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:None <list_item>
+               > (0,0,0,0,3) list item body
+            Paragraph('Search Page')   /home/anon/Documents/college/courses/CS461_Databases/assignments/assn3/docs/source/index.rst:16 <paragraph>
+                 > (0,0,0,0,5) list item paragraph
+                   (0,0,0,0,2) body
+              MixedStyledText('Search Page')
+                AnnotatedText('Search Page', style='internal link')   None:None <reference>
+                     > (0,0,1,0,1) internal hyperlink
+                  MixedStyledText('Search Page')
+                    MixedStyledText('Search Page')   None:None <inline>
+                      SingleStyledText('Search Page')
+#### DownExpandingContainer('footer')
+  Footer('		3')
+       > (0,0,0,0,2) footer
+         (0,0,0,0,1) body
+    MixedStyledText('		3')
+      Tab('	')
+      Tab('	')
+      Field('3')
+        SingleStyledText('3')
+---------------------------------- page 5 ----------------------------------
+#### FlowablesContainer('chapter title')
+  Paragraph('Python Module Index', style='front matter section title')
+       > (0,0,1,0,2) front matter section title
+         (0,0,0,0,2) body
+    Field('Python Module Index')
+      SingleStyledText('Python Module Index')
+#### ChainedContainer('column1')
+  StaticGroupedFlowables()
+    IndexSection()
+         > (0,0,0,1,1) chapter
+      IndexLabel('m')
+           > (0,0,0,0,2) index section label
+             (0,0,0,0,1) body
+        SingleStyledText('m')
+      IndexEntry('minisql, 1')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('minisql, 1')
+          SingleStyledText('minisql', style='domain')
+               > (0,0,1,0,3) domain index entry name
+          SingleStyledText(', ')
+          Reference('1')
+               > (0,0,0,1,1) linked reference
+            SingleStyledText('1')
+#### DownExpandingContainer('footer')
+  Footer('		5')
+       > (0,0,0,0,2) footer
+         (0,0,0,0,1) body
+    MixedStyledText('		5')
+      Tab('	')
+      Tab('	')
+      Field('5')
+        SingleStyledText('5')
+---------------------------------- page 6 ----------------------------------
+#### UpExpandingContainer('header')
+  Header('miniSQL Documentation, Release 1...')
+       > (0,0,0,0,2) header
+         (0,0,0,0,1) body
+    MixedStyledText('miniSQL Documentation, Release 1...')
+      Field('miniSQL Documentation')
+        SingleStyledText('miniSQL Documentation')
+      SingleStyledText(', ')
+      Field('Release 1.0.0')
+        SingleStyledText('Release 1.0.0')
+#### DownExpandingContainer('footer')
+  Footer('6		Python Module Index')
+       > (0,0,0,0,2) footer
+         (0,0,0,0,1) body
+    MixedStyledText('6		Python Module Index')
+      Field('6')
+        SingleStyledText('6')
+      Tab('	')
+      Tab('	')
+      Field('Python Module Index')
+        SingleStyledText('Python Module Index')
+---------------------------------- page 7 ----------------------------------
+#### FlowablesContainer('chapter title')
+  Paragraph('Index', style='front matter section title')
+       > (0,0,1,0,2) front matter section title
+         (0,0,0,0,2) body
+    Field('Index')
+      SingleStyledText('Index')
+#### ChainedContainer('column1')
+  IndexSection()
+       > (0,0,0,1,1) chapter
+    Index()   index
+         > (0,0,0,0,2) index
+      IndexLabel('D')
+           > (0,0,0,0,2) index section label
+             (0,0,0,0,1) body
+        SingleStyledText('D')
+      IndexEntry('do_bye() (minisql.MinisqlShell m...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_bye() (minisql.MinisqlShell m...')
+          SingleStyledText('do_bye() (minisql.MinisqlShell m...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_circle() (minisql.MinisqlShel...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_circle() (minisql.MinisqlShel...')
+          SingleStyledText('do_circle() (minisql.MinisqlShel...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_color() (minisql.MinisqlShell...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_color() (minisql.MinisqlShell...')
+          SingleStyledText('do_color() (minisql.MinisqlShell...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_forward() (minisql.MinisqlShe...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_forward() (minisql.MinisqlShe...')
+          SingleStyledText('do_forward() (minisql.MinisqlShe...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_goto() (minisql.MinisqlShell ...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_goto() (minisql.MinisqlShell ...')
+          SingleStyledText('do_goto() (minisql.MinisqlShell ...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_heading() (minisql.MinisqlShe...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_heading() (minisql.MinisqlShe...')
+          SingleStyledText('do_heading() (minisql.MinisqlShe...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_home() (minisql.MinisqlShell ...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_home() (minisql.MinisqlShell ...')
+          SingleStyledText('do_home() (minisql.MinisqlShell ...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_left() (minisql.MinisqlShell ...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_left() (minisql.MinisqlShell ...')
+          SingleStyledText('do_left() (minisql.MinisqlShell ...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_playback() (minisql.MinisqlSh...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_playback() (minisql.MinisqlSh...')
+          SingleStyledText('do_playback() (minisql.MinisqlSh...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_position() (minisql.MinisqlSh...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_position() (minisql.MinisqlSh...')
+          SingleStyledText('do_position() (minisql.MinisqlSh...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_record() (minisql.MinisqlShel...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_record() (minisql.MinisqlShel...')
+          SingleStyledText('do_record() (minisql.MinisqlShel...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_reset() (minisql.MinisqlShell...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_reset() (minisql.MinisqlShell...')
+          SingleStyledText('do_reset() (minisql.MinisqlShell...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_right() (minisql.MinisqlShell...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_right() (minisql.MinisqlShell...')
+          SingleStyledText('do_right() (minisql.MinisqlShell...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('do_undo() (minisql.MinisqlShell ...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('do_undo() (minisql.MinisqlShell ...')
+          SingleStyledText('do_undo() (minisql.MinisqlShell ...')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+      IndexLabel('I')
+           > (0,0,0,0,2) index section label
+             (0,0,0,0,1) body
+        SingleStyledText('I')
+      IndexEntry('interpretQueries() (in module mi...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('interpretQueries() (in module mi...')
+          SingleStyledText('interpretQueries() (in module mi...')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+      IndexLabel('M')
+           > (0,0,0,0,2) index section label
+             (0,0,0,0,1) body
+        SingleStyledText('M')
+      IndexEntry('main() (in module minisql), 2')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('main() (in module minisql), 2')
+          SingleStyledText('main() (in module minisql), ')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+      IndexEntry('minisql (module), 1')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('minisql (module), 1')
+          SingleStyledText('minisql (module), ')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexEntry('MinisqlShell (class in minisql),...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('MinisqlShell (class in minisql),...')
+          SingleStyledText('MinisqlShell (class in minisql),...')
+          MixedStyledText('1')
+            Reference('1')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('1')
+      IndexLabel('P')
+           > (0,0,0,0,2) index section label
+             (0,0,0,0,1) body
+        SingleStyledText('P')
+      IndexEntry('parse() (in module minisql), 2')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('parse() (in module minisql), 2')
+          SingleStyledText('parse() (in module minisql), ')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+      IndexEntry('parseQueries() (in module minisq...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('parseQueries() (in module minisq...')
+          SingleStyledText('parseQueries() (in module minisq...')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+      IndexEntry('precmd() (minisql.MinisqlShell m...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('precmd() (minisql.MinisqlShell m...')
+          SingleStyledText('precmd() (minisql.MinisqlShell m...')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+      IndexLabel('S')
+           > (0,0,0,0,2) index section label
+             (0,0,0,0,1) body
+        SingleStyledText('S')
+      IndexEntry('supportsColor() (in module minis...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('supportsColor() (in module minis...')
+          SingleStyledText('supportsColor() (in module minis...')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+      IndexLabel('V')
+           > (0,0,0,0,2) index section label
+             (0,0,0,0,1) body
+        SingleStyledText('V')
+      IndexEntry('validateStdinReadable() (in modu...')
+           > (0,0,0,1,2) level 1 index entry
+             (0,0,0,0,1) body
+        MixedStyledText('validateStdinReadable() (in modu...')
+          SingleStyledText('validateStdinReadable() (in modu...')
+          MixedStyledText('2')
+            Reference('2')
+                 > (0,0,0,1,1) linked reference
+              SingleStyledText('2')
+#### DownExpandingContainer('footer')
+  Footer('		7')
+       > (0,0,0,0,2) footer
+         (0,0,0,0,1) body
+    MixedStyledText('		7')
+      Tab('	')
+      Tab('	')
+      Field('7')
+        SingleStyledText('7')

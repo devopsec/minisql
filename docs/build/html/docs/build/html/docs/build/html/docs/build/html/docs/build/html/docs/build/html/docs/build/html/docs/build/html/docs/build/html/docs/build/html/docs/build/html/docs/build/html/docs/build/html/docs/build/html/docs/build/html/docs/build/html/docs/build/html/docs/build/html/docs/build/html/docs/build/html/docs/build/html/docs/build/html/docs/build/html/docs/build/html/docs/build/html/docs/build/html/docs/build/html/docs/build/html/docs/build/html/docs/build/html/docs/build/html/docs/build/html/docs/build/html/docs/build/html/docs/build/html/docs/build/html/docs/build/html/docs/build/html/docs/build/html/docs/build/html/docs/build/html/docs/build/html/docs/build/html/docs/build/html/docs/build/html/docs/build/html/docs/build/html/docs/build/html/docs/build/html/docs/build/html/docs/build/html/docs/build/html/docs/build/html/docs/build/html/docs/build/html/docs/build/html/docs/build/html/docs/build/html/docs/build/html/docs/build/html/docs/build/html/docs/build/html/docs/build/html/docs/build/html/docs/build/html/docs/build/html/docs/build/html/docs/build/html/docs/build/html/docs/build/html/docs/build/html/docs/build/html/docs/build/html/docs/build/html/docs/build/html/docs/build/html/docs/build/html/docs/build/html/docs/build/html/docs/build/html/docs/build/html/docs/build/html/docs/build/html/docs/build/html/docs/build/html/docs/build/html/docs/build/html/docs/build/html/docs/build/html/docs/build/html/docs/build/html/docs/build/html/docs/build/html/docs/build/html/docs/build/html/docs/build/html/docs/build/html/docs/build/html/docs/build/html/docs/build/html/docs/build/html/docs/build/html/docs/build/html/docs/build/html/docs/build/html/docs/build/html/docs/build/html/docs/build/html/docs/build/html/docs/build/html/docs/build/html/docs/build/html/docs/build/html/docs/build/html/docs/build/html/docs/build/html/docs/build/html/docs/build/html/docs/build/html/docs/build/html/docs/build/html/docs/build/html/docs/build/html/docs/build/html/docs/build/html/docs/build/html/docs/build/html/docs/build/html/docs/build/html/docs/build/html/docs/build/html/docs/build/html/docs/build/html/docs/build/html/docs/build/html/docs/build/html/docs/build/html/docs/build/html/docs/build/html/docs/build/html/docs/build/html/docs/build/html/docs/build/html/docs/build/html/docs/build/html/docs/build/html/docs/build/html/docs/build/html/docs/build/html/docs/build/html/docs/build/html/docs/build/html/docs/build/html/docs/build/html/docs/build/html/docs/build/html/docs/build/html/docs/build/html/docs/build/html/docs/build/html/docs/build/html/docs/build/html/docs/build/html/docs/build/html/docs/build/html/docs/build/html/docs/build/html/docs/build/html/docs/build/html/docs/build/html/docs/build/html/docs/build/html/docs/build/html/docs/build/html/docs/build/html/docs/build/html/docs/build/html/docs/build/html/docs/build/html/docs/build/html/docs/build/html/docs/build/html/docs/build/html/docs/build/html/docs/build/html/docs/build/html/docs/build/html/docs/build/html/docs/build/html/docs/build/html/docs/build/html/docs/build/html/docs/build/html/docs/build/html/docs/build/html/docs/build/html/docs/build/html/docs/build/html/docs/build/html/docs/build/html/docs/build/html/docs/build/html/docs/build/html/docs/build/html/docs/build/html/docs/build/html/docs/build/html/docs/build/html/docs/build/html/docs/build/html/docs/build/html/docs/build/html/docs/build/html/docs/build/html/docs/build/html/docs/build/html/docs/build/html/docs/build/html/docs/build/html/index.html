@@ -1,0 +1,336 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>miniSQL Project &#8212; miniSQL 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="minisql-project">
+<h1>miniSQL Project<a class="headerlink" href="#minisql-project" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound" id="mastertoc">
+</div>
+<div class="section" id="module-minisql">
+<span id="minisql-module"></span><h2>miniSQL module<a class="headerlink" href="#module-minisql" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="minisql.MinisqlShell">
+<em class="property">class </em><code class="descclassname">minisql.</code><code class="descname">MinisqlShell</code><span class="sig-paren">(</span><em>completekey='tab'</em>, <em>stdin=None</em>, <em>stdout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="minisql.MinisqlShell.do_bye">
+<code class="descname">do_bye</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_bye"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_bye" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop recording, close the turtle window, and exit:  BYE</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_circle">
+<code class="descname">do_circle</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw circle with given radius an options extent and steps:  CIRCLE 50</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_color">
+<code class="descname">do_color</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the color:  COLOR BLUE</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_forward">
+<code class="descname">do_forward</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle forward by the specified distance:  FORWARD 10</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_goto">
+<code class="descname">do_goto</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_goto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_goto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move turtle to an absolute position with changing orientation.  GOTO 100 200</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_heading">
+<code class="descname">do_heading</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_heading"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the current turtle heading in degrees:  HEADING</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_home">
+<code class="descname">do_home</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_home"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_home" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return turtle to the home position:  HOME</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_left">
+<code class="descname">do_left</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_left"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn turtle left by given number of degrees:  LEFT 90</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_playback">
+<code class="descname">do_playback</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_playback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_playback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Playback commands from a file:  PLAYBACK rose.cmd</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_position">
+<code class="descname">do_position</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the current turtle position:  POSITION</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_record">
+<code class="descname">do_record</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save future commands to filename:  RECORD rose.cmd</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_reset">
+<code class="descname">do_reset</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the screen and return turtle to center:  RESET</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_right">
+<code class="descname">do_right</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_right"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn turtle right by given number of degrees:  RIGHT 20</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.do_undo">
+<code class="descname">do_undo</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.do_undo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.do_undo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Undo (repeatedly) the last turtle action(s):  UNDO</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MinisqlShell.precmd">
+<code class="descname">precmd</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MinisqlShell.precmd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MinisqlShell.precmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method executed just before the command line is
+interpreted, but after the input prompt is generated and issued.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.interpretQueries">
+<code class="descclassname">minisql.</code><code class="descname">interpretQueries</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#interpretQueries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.interpretQueries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpret queries as a list of commands to execute in miniSQL language</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queries</strong> – list of queries to process</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">False to exit, True to continue (applicable to miniSQL shell)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.main">
+<code class="descclassname">minisql.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments and decide how data is processed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">0 on success, 1 on failure</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.parse">
+<code class="descclassname">minisql.</code><code class="descname">parse</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a series of zero or more numbers to an argument tuple</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.parseQueries">
+<code class="descclassname">minisql.</code><code class="descname">parseQueries</code><span class="sig-paren">(</span><em>raw_queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#parseQueries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.parseQueries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse input into interpretable queries based on a SQL-like syntax</p>
+<p>Queries are delimited by a semicolon and query commands are delimited by whitespace</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>raw_queries</strong> – command string input</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of queries (each as a list of commands)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.supportsColor">
+<code class="descclassname">minisql.</code><code class="descname">supportsColor</code><span class="sig-paren">(</span><em>stream</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#supportsColor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.supportsColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if terminal supports ASCII color codes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>stream</strong> – file stream to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True == supported, False == not supported</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.validateStdinReadable">
+<code class="descclassname">minisql.</code><code class="descname">validateStdinReadable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#validateStdinReadable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.validateStdinReadable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if stdin has been redirected by parent shell</p>
+<p>See the following table for supported input types.</p>
+<p>Note that as of python v3.3 symlinks are followed by default.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="28%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Stdin Type</th>
+<th class="head">Supported</th>
+<th class="head">Program Context</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>directory</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>keyboard</td>
+<td>yes</td>
+<td>miniSQL shell</td>
+</tr>
+<tr class="row-even"><td>storage</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>file</td>
+<td>yes</td>
+<td>miniSQL cmd</td>
+</tr>
+<tr class="row-even"><td>symlink</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>pipe</td>
+<td>yes</td>
+<td>miniSQL cmd</td>
+</tr>
+<tr class="row-even"><td>socket</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">not readable == -1, 0 == readable in cmd, 1 == readable in shell</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-settings">
+<span id="settings-module"></span><h2>settings module<a class="headerlink" href="#module-settings" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">miniSQL</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, DevOpSec.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

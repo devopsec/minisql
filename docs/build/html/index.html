@@ -1,0 +1,590 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The miniSQL Project &#8212; miniSQL 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Project Requirements" href="requirements.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="the-minisql-project">
+<h1>The miniSQL Project<a class="headerlink" href="#the-minisql-project" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound" id="mastertoc">
+</div>
+<div class="section" id="module-minisql">
+<span id="minisql-module"></span><h2>miniSQL module<a class="headerlink" href="#module-minisql" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="minisql.MiniDB">
+<em class="property">class </em><code class="descclassname">minisql.</code><code class="descname">MiniDB</code><a class="reference internal" href="_modules/minisql.html#MiniDB"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access to DB, lower level storage operations, and higher level api (querying)</p>
+<dl class="method">
+<dt id="minisql.MiniDB.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close database connection and cleanup</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.createRecord">
+<code class="descname">createRecord</code><span class="sig-paren">(</span><em>name</em>, <em>a1</em>, <em>a2</em>, <em>a3</em>, <em>a4</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.createRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.createRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a record in the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – record name</li>
+<li><strong>a1</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+<li><strong>a2</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+<li><strong>a3</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+<li><strong>a4</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True | False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.deleteRecord">
+<code class="descname">deleteRecord</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.deleteRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.deleteRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a record from the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – record to delete</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True | False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.deleteRecords">
+<code class="descname">deleteRecords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.deleteRecords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.deleteRecords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all records from the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True | False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.getRecord">
+<code class="descname">getRecord</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.getRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.getRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get record from database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – record name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">tuple(&lt;name&gt;, &lt;a1&gt;, &lt;a2&gt;, &lt;a3&gt;, &lt;a4&gt;) | None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.getRecords">
+<code class="descname">getRecords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.getRecords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.getRecords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get aal records from database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – record name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list(tuple(&lt;name&gt;, &lt;a1&gt;, &lt;a2&gt;, &lt;a3&gt;, &lt;a4&gt;)) | [()]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.interpretQueries">
+<code class="descname">interpretQueries</code><span class="sig-paren">(</span><em>queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.interpretQueries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.interpretQueries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpret queries as a list of commands to execute in miniSQL language</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>queries</strong> – list of queries to process</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">False to exit, True to continue (applicable to miniSQL shell)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.parseQueries">
+<code class="descname">parseQueries</code><span class="sig-paren">(</span><em>raw_queries</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.parseQueries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.parseQueries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse input into interpretable queries based on a SQL-like syntax</p>
+<p>Queries are delimited by a semicolon and query commands are delimited by whitespace</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>raw_queries</strong> – command string input</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of queries to execute</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>query_string</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface to query the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>query_string</strong> – queries to run</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if they succeed, false if they fail</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.recordExists">
+<code class="descname">recordExists</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.recordExists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.recordExists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if database record exists</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – record name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True | False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniDB.updateRecord">
+<code class="descname">updateRecord</code><span class="sig-paren">(</span><em>name</em>, <em>a1=None</em>, <em>a2=None</em>, <em>a3=None</em>, <em>a4=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniDB.updateRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniDB.updateRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a record in the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – record name</li>
+<li><strong>a1</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+<li><strong>a2</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+<li><strong>a3</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+<li><strong>a4</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – field data</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True | False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="minisql.MiniShell">
+<em class="property">class </em><code class="descclassname">minisql.</code><code class="descname">MiniShell</code><a class="reference internal" href="_modules/minisql.html#MiniShell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniShell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple shell-like interpreter for miniSQL queries</p>
+<dl class="method">
+<dt id="minisql.MiniShell.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniShell.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniShell.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close database connection and cleanup</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniShell.complete">
+<code class="descname">complete</code><span class="sig-paren">(</span><em>text</em>, <em>state</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniShell.complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniShell.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all possible commands to complete text</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> – </li>
+<li><strong>state</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="minisql.MiniShell.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#MiniShell.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.MiniShell.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the shell command interpreter</p>
+<p>Accept commands until user quits program</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.main">
+<code class="descclassname">minisql.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command line arguments and decide how data is processed</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">0 on success, 1 on failure</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.printTable">
+<code class="descclassname">minisql.</code><code class="descname">printTable</code><span class="sig-paren">(</span><em>headers</em>, <em>data</em>, <em>num_rows=None</em>, <em>fmt='block'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#printTable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.printTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print in table format</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>headers</strong> – list of strings</li>
+<li><strong>data</strong> – list of lists (rows)</li>
+<li><strong>num_rows</strong> – int</li>
+<li><strong>fmt</strong> – str format type</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.supportsColor">
+<code class="descclassname">minisql.</code><code class="descname">supportsColor</code><span class="sig-paren">(</span><em>stream</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#supportsColor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.supportsColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if terminal supports ASCII color codes</p>
+<p>Modified method from Python cookbook, #475186</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>stream</strong> – file stream to check</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True == supported, False == not supported</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="minisql.validateStdinReadable">
+<code class="descclassname">minisql.</code><code class="descname">validateStdinReadable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/minisql.html#validateStdinReadable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#minisql.validateStdinReadable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if stdin has been redirected by parent shell</p>
+<p>See the following table for supported input types.</p>
+<p>Note that as of python v3.3 symlinks are followed by default.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="28%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Stdin Type</th>
+<th class="head">Supported</th>
+<th class="head">Program Context</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>directory</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>keyboard</td>
+<td>yes</td>
+<td>miniSQL shell</td>
+</tr>
+<tr class="row-even"><td>storage</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>file</td>
+<td>yes</td>
+<td>miniSQL cmd</td>
+</tr>
+<tr class="row-even"><td>symlink</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>pipe</td>
+<td>yes</td>
+<td>miniSQL cmd</td>
+</tr>
+<tr class="row-even"><td>socket</td>
+<td>no</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">not readable == -1, 0 == readable in cmd, 1 == readable in shell</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-settings">
+<span id="settings-module"></span><h2>settings module<a class="headerlink" href="#module-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="settings.MAJOR_RELEASE_NUMBER">
+<code class="descclassname">settings.</code><code class="descname">MAJOR_RELEASE_NUMBER</code><a class="headerlink" href="#settings.MAJOR_RELEASE_NUMBER" title="Permalink to this definition">¶</a></dt>
+<dd><p>miniSQL major release version</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.MINOR_RELEASE_NUMBER">
+<code class="descclassname">settings.</code><code class="descname">MINOR_RELEASE_NUMBER</code><a class="headerlink" href="#settings.MINOR_RELEASE_NUMBER" title="Permalink to this definition">¶</a></dt>
+<dd><p>miniSQL minor release version</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.PATCH_RELEASE_NUMBER">
+<code class="descclassname">settings.</code><code class="descname">PATCH_RELEASE_NUMBER</code><a class="headerlink" href="#settings.PATCH_RELEASE_NUMBER" title="Permalink to this definition">¶</a></dt>
+<dd><p>miniSQL patch release version</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.LOGO">
+<code class="descclassname">settings.</code><code class="descname">LOGO</code><a class="headerlink" href="#settings.LOGO" title="Permalink to this definition">¶</a></dt>
+<dd><p>miniSQL ascii logo</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.DB_STORAGE_FILE">
+<code class="descclassname">settings.</code><code class="descname">DB_STORAGE_FILE</code><a class="headerlink" href="#settings.DB_STORAGE_FILE" title="Permalink to this definition">¶</a></dt>
+<dd><p>where database records stored</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.DB_ALLOWED_FIELDS">
+<code class="descclassname">settings.</code><code class="descname">DB_ALLOWED_FIELDS</code><a class="headerlink" href="#settings.DB_ALLOWED_FIELDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>allowed field names for a database record</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.DB_RECORD_SIZE">
+<code class="descclassname">settings.</code><code class="descname">DB_RECORD_SIZE</code><a class="headerlink" href="#settings.DB_RECORD_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of bytes per record</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.DB_RECORD_NAME_SIZE">
+<code class="descclassname">settings.</code><code class="descname">DB_RECORD_NAME_SIZE</code><a class="headerlink" href="#settings.DB_RECORD_NAME_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of field name in bytes</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.DB_FIELD_DATA_SIZE">
+<code class="descclassname">settings.</code><code class="descname">DB_FIELD_DATA_SIZE</code><a class="headerlink" href="#settings.DB_FIELD_DATA_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of field data in bytes</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.DB_ENCODING">
+<code class="descclassname">settings.</code><code class="descname">DB_ENCODING</code><a class="headerlink" href="#settings.DB_ENCODING" title="Permalink to this definition">¶</a></dt>
+<dd><p>encoding used for strings</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.SHELL_INTRO">
+<code class="descclassname">settings.</code><code class="descname">SHELL_INTRO</code><a class="headerlink" href="#settings.SHELL_INTRO" title="Permalink to this definition">¶</a></dt>
+<dd><p>intro message displayed in minisql shell</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.SHELL_PROMPT">
+<code class="descclassname">settings.</code><code class="descname">SHELL_PROMPT</code><a class="headerlink" href="#settings.SHELL_PROMPT" title="Permalink to this definition">¶</a></dt>
+<dd><p>user prompt displayed in minisql shell</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.SHELL_HISTORY_FILE">
+<code class="descclassname">settings.</code><code class="descname">SHELL_HISTORY_FILE</code><a class="headerlink" href="#settings.SHELL_HISTORY_FILE" title="Permalink to this definition">¶</a></dt>
+<dd><p>stores minisql shell commands for command history lookup</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="settings.SHELL_HISTORY_LENGTH">
+<code class="descclassname">settings.</code><code class="descname">SHELL_HISTORY_LENGTH</code><a class="headerlink" href="#settings.SHELL_HISTORY_LENGTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of lines of history to store</p>
+</dd></dl>
+
+</div>
+<div class="section" id="storage-specification">
+<h2>storage specification<a class="headerlink" href="#storage-specification" title="Permalink to this headline">¶</a></h2>
+<p>record storage format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">record_name</span><span class="o">&gt;</span>\<span class="n">t</span><span class="o">&lt;</span><span class="n">a1</span><span class="o">&gt;</span>\<span class="n">t</span><span class="o">&lt;</span><span class="n">a2</span><span class="o">&gt;</span>\<span class="n">t</span><span class="o">&lt;</span><span class="n">a3</span><span class="o">&gt;</span>\<span class="n">t</span><span class="o">&lt;</span><span class="n">a4</span><span class="o">&gt;</span>\<span class="n">r</span>\<span class="n">n</span>
+</pre></div>
+</div>
+<p>miniSQL data constraints:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="44%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">storage type</th>
+<th class="head">data type</th>
+<th class="head">size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>field name</td>
+<td>string</td>
+<td>18 B</td>
+</tr>
+<tr class="row-odd"><td>field data</td>
+<td>unsigned integer</td>
+<td>4 B * 4</td>
+</tr>
+<tr class="row-even"><td>tab char</td>
+<td>char</td>
+<td>1 B * 4</td>
+</tr>
+<tr class="row-odd"><td>CRLF string</td>
+<td>char</td>
+<td>2 B</td>
+</tr>
+<tr class="row-even"><td colspan="2">total record size</td>
+<td>40 B</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">miniSQL</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">1. Project Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database_description.html">2. Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_input.html">3. Test Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage_format.html">4. Storage Specification</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="requirements.html" title="next chapter">1. Project Requirements</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, DevOpSec.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

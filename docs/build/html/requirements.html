@@ -1,0 +1,196 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1. Project Requirements &#8212; miniSQL 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Database" href="database_description.html" />
+    <link rel="prev" title="The miniSQL Project" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="project-requirements">
+<h1>1. Project Requirements<a class="headerlink" href="#project-requirements" title="Permalink to this headline">¶</a></h1>
+<p>This project was written as an exercise for my Database Systems class.
+Here were the requirements for the project.</p>
+<div class="section" id="summary">
+<h2>1.1. Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>For this assignment you will write a fully self-describing program to
+perform file operations using dynamic hashing.</p>
+</div>
+<div class="section" id="the-records">
+<h2>1.2. The records<a class="headerlink" href="#the-records" title="Permalink to this headline">¶</a></h2>
+<p>Each record will consist of a name field, an eighteen-character string,
+which is the key field and four non-negative integers; having field
+names a1, a2, a3, and a4.</p>
+</div>
+<div class="section" id="the-file">
+<h2>1.3. The file<a class="headerlink" href="#the-file" title="Permalink to this headline">¶</a></h2>
+<p>You will use block I/O to perform all operations on the file. A block
+size of 40 will be used. Within a block, you should read and write
+whole records. The file must be created before use, but not removed
+after uses. It should expand and contract as needed.</p>
+</div>
+<div class="section" id="the-input">
+<h2>1.4. The Input<a class="headerlink" href="#the-input" title="Permalink to this headline">¶</a></h2>
+<p>Input to your program will consist of commands, one per line, requesting
+operations to be performed on the file. Input will come from standard
+input. Legal commands are:</p>
+<p><strong>*I record*</strong> – Insert record into the file, unless one having the same
+key is already there.</p>
+<p><strong>*R name*</strong> – Retrieve the record having key name, if it is there.</p>
+<p><strong>*D name*</strong> – Delete the record having key name from the file, if it
+exists.</p>
+<p><strong>*U name a-field name new-value*</strong>. Update the given record by finding
+it (if it exists) and replacing the given information.</p>
+<p>In order to make the input easy to parse:</p>
+<ol class="arabic">
+<li><p class="first">The first character will begin in column one;</p>
+</li>
+<li><dl class="first docutils">
+<dt>The elements of each type of input will be separated by single tab</dt><dd><p>characters;</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">The name field will contain no tabs;</p>
+</li>
+<li><p class="first">A new line will immediately follow the last element of each command.</p>
+</li>
+<li><dl class="first docutils">
+<dt>All input is guaranteed to be correct, so no data validation need be</dt><dd><p>performed.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="the-output">
+<h2>1.5. The Output<a class="headerlink" href="#the-output" title="Permalink to this headline">¶</a></h2>
+<p>This program will be fully self-describing, which means that a person
+can read only the output file and duplicate by hand the exact actions of
+the program on a given input sequence. Hand duplication should be
+possible even without availability of the input file.</p>
+</div>
+<div class="section" id="deliverables">
+<h2>1.6. Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>A Database using MySQL and an corresponding ER Diagram describing the database.</li>
+<li>A new DBMS system to fully realize your database.</li>
+<li>An interface to your DBMS system in PHP.</li>
+<li>Complete, professionally written documentation.</li>
+<li>Test input files and commands.</li>
+</ol>
+</div>
+<div class="section" id="notes">
+<h2>1.7. Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Be sure to include identification information in all of your files and outputs.</li>
+</ol>
+<p>2. The program will be tested by redirected standard I/O to and from
+files. Be sure that your input echo still works when I/O is redirected.</p>
+<p>3. In general, your code should use low-level file I/O. If you are
+programming in C, you should use fread, fwrite and fseek for file
+I/O. If you are using Java, you probably want to use Buffered Streams.</p>
+<ol class="arabic simple" start="4">
+<li>Include test output as well.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">miniSQL</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Project Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database_description.html">2. Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_input.html">3. Test Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage_format.html">4. Storage Specification</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">The miniSQL Project</a></li>
+      <li>Next: <a href="database_description.html" title="next chapter">2. Database</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, DevOpSec.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/requirements.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

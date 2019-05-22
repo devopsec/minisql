@@ -1,0 +1,296 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3. Test Queries &#8212; miniSQL 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Storage Specification" href="storage_format.html" />
+    <link rel="prev" title="2. Database" href="database_description.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="test-queries">
+<h1>3. Test Queries<a class="headerlink" href="#test-queries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mysql-input">
+<h2>3.1. MySQL Input<a class="headerlink" href="#mysql-input" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">use</span> <span class="n">global_insurance</span><span class="p">;</span>
+
+<span class="o">--</span> <span class="o">|==========</span> <span class="n">get</span> <span class="n">address</span> <span class="n">records</span> <span class="k">for</span> <span class="n">a</span> <span class="n">customer</span> <span class="o">==========|</span>
+<span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">address</span> <span class="n">t1</span><span class="p">,</span> <span class="n">address_records</span> <span class="n">t2</span>
+  <span class="n">where</span> <span class="n">t2</span><span class="o">.</span><span class="n">customer_id</span> <span class="o">=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">t1</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">t2</span><span class="o">.</span><span class="n">address_id</span><span class="p">;</span>
+
+<span class="o">--</span> <span class="o">|==========</span> <span class="n">get</span> <span class="n">agent</span> <span class="n">managing</span> <span class="n">each</span> <span class="n">insurance</span> <span class="n">policy</span> <span class="k">for</span> <span class="n">a</span> <span class="n">customer</span> <span class="o">==========|</span>
+<span class="n">select</span> <span class="p">(</span><span class="n">select</span> <span class="n">t4</span><span class="o">.</span><span class="n">name</span> <span class="n">where</span> <span class="n">t4</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">agent_id</span><span class="p">)</span> <span class="k">as</span> <span class="s1">&#39;Home Insurance Agent&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">select</span> <span class="n">t4</span><span class="o">.</span><span class="n">name</span> <span class="n">where</span> <span class="n">t4</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">t2</span><span class="o">.</span><span class="n">agent_id</span><span class="p">)</span> <span class="k">as</span> <span class="s1">&#39;Auto Insurance Agent&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">select</span> <span class="n">t4</span><span class="o">.</span><span class="n">name</span> <span class="n">where</span> <span class="n">t4</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">t3</span><span class="o">.</span><span class="n">agent_id</span><span class="p">)</span> <span class="k">as</span> <span class="s1">&#39;Life Insurance Agent&#39;</span>
+  <span class="kn">from</span> <span class="nn">home_insurance_policy</span> <span class="n">t1</span><span class="p">,</span>
+    <span class="n">auto_insurance_policy</span> <span class="n">t2</span><span class="p">,</span>
+    <span class="n">life_insurance_policy</span> <span class="n">t3</span><span class="p">,</span>
+    <span class="n">agent</span> <span class="n">t4</span>
+  <span class="n">where</span> <span class="n">t1</span><span class="o">.</span><span class="n">customer_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="ow">or</span> <span class="n">t2</span><span class="o">.</span><span class="n">customer_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="ow">or</span> <span class="n">t3</span><span class="o">.</span><span class="n">customer_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="o">--</span> <span class="o">|</span> <span class="o">==========</span> <span class="n">get</span> <span class="n">total</span> <span class="n">coverage</span> <span class="n">amount</span> <span class="k">for</span> <span class="n">an</span> <span class="n">insurance</span> <span class="n">company</span> <span class="o">==========|</span>
+<span class="n">select</span> <span class="p">(</span><span class="n">SUM</span><span class="p">(</span><span class="n">t1</span><span class="o">.</span><span class="n">dwelling_coverage</span><span class="p">)</span><span class="o">+</span><span class="n">SUM</span><span class="p">(</span><span class="n">t1</span><span class="o">.</span><span class="n">liability_coverage</span><span class="p">)</span><span class="o">+</span><span class="n">SUM</span><span class="p">(</span><span class="n">t1</span><span class="o">.</span><span class="n">personal_property_coverage</span><span class="p">)</span><span class="o">+</span><span class="n">SUM</span><span class="p">(</span><span class="n">t1</span><span class="o">.</span><span class="n">living_expense_coverage</span><span class="p">))</span> <span class="k">as</span> <span class="s1">&#39;Home Insurance Coverage&#39;</span><span class="p">,</span>
+  <span class="p">(</span><span class="n">SUM</span><span class="p">(</span><span class="n">t2</span><span class="o">.</span><span class="n">coverage_amount</span><span class="p">)</span><span class="o">+</span><span class="n">SUM</span><span class="p">(</span><span class="n">t2</span><span class="o">.</span><span class="n">liability_coverage</span><span class="p">)</span><span class="o">+</span><span class="n">SUM</span><span class="p">(</span><span class="n">t2</span><span class="o">.</span><span class="n">uninsured_motorists_coverage</span><span class="p">)</span><span class="o">+</span><span class="n">SUM</span><span class="p">(</span><span class="n">t2</span><span class="o">.</span><span class="n">medical_coverage</span><span class="p">)</span><span class="o">+</span><span class="n">SUM</span><span class="p">(</span><span class="n">t2</span><span class="o">.</span><span class="n">personal_injury_coverage</span><span class="p">))</span> <span class="k">as</span> <span class="s1">&#39;Auto Insurance Coverage&#39;</span><span class="p">,</span>
+   <span class="n">SUM</span><span class="p">(</span><span class="n">t3</span><span class="o">.</span><span class="n">coverage</span><span class="p">)</span> <span class="k">as</span> <span class="s1">&#39;Life Insurance Coverage&#39;</span>
+  <span class="kn">from</span> <span class="nn">home_insurance_policy</span> <span class="n">t1</span><span class="p">,</span>
+    <span class="n">auto_insurance_policy</span> <span class="n">t2</span><span class="p">,</span>
+    <span class="n">life_insurance_policy</span> <span class="n">t3</span><span class="p">,</span>
+    <span class="n">insurance_company</span> <span class="n">t4</span>
+  <span class="n">where</span> <span class="n">t1</span><span class="o">.</span><span class="n">insurance_company_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="ow">or</span> <span class="n">t2</span><span class="o">.</span><span class="n">insurance_company_id</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="ow">or</span> <span class="n">t3</span><span class="o">.</span><span class="n">insurance_company_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="o">--</span> <span class="o">|==========</span> <span class="n">show</span> <span class="n">sales</span> <span class="k">for</span> <span class="n">arya</span> <span class="n">stark</span> <span class="o">==========|</span>
+<span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">sales</span> <span class="n">where</span> <span class="n">agent_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="o">--</span> <span class="s2">&quot;</span>
+
+<span class="o">--</span> <span class="o">|==========</span> <span class="n">show</span> <span class="n">premiums</span> <span class="k">for</span> <span class="n">a</span> <span class="n">customer</span> <span class="o">==========|</span>
+<span class="n">select</span> <span class="n">policy_type</span> <span class="k">as</span> <span class="s1">&#39;Insurance Type&#39;</span><span class="p">,</span><span class="n">amount_due</span> <span class="k">as</span> <span class="s1">&#39;Amount Due&#39;</span> <span class="kn">from</span> <span class="nn">premium</span> <span class="n">where</span> <span class="n">customer_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="o">--</span> <span class="o">|==========</span> <span class="n">update</span> <span class="n">a</span> <span class="n">policy</span> <span class="ow">and</span> <span class="n">check</span> <span class="n">premiums</span> <span class="n">again</span> <span class="o">==========|</span>
+<span class="n">update</span> <span class="n">auto_insurance_policy</span> <span class="nb">set</span> <span class="n">coverage_amount</span> <span class="o">=</span> <span class="mi">34000</span><span class="p">,</span> <span class="n">coverage_deductible</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">uninsured_motorists_coverage</span> <span class="o">=</span> <span class="mi">50000</span><span class="p">,</span> <span class="n">accident_forgiveness</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">where</span> <span class="n">customer_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">select</span> <span class="n">policy_type</span> <span class="k">as</span> <span class="s1">&#39;Insurance Type&#39;</span><span class="p">,</span><span class="n">amount_due</span> <span class="k">as</span> <span class="s1">&#39;Amount Due&#39;</span> <span class="kn">from</span> <span class="nn">premium</span> <span class="n">where</span> <span class="n">customer_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="o">--</span> <span class="o">|==========</span> <span class="n">update</span> <span class="n">an</span> <span class="n">insurance</span> <span class="n">company</span> <span class="ow">and</span> <span class="n">check</span> <span class="n">premiums</span> <span class="n">again</span> <span class="o">==========|</span>
+<span class="n">update</span> <span class="n">insurance_company</span> <span class="nb">set</span> <span class="n">home_rate</span> <span class="o">=</span> <span class="mf">0.0002559</span><span class="p">,</span> <span class="n">auto_rate</span> <span class="o">=</span> <span class="mf">0.0028222</span><span class="p">,</span> <span class="n">life_rate</span> <span class="o">=</span> <span class="mf">0.0003299</span> <span class="n">where</span> <span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+  <span class="n">select</span> <span class="n">name</span><span class="p">,</span><span class="n">home_rate</span><span class="p">,</span><span class="n">auto_rate</span><span class="p">,</span><span class="n">life_rate</span> <span class="kn">from</span> <span class="nn">insurance_company</span><span class="p">;</span>
+  <span class="n">select</span> <span class="n">policy_type</span><span class="p">,</span><span class="n">amount_due</span> <span class="kn">from</span> <span class="nn">premium</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mysql-output">
+<h2>3.2. MySQL Output<a class="headerlink" href="#mysql-output" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----+-----------+-----------------+---------+-------+---------------+---------+---------------------+---------------------+-------------+------------+</span>
+<span class="o">|</span> <span class="nb">id</span> <span class="o">|</span> <span class="n">apartment</span> <span class="o">|</span> <span class="n">street</span>          <span class="o">|</span> <span class="n">city</span>    <span class="o">|</span> <span class="n">state</span> <span class="o">|</span> <span class="n">country</span>       <span class="o">|</span> <span class="n">zipcode</span> <span class="o">|</span> <span class="n">creation_time</span>       <span class="o">|</span> <span class="n">modification_time</span>   <span class="o">|</span> <span class="n">customer_id</span> <span class="o">|</span> <span class="n">address_id</span> <span class="o">|</span>
+<span class="o">+----+-----------+-----------------+---------+-------+---------------+---------+---------------------+---------------------+-------------+------------+</span>
+<span class="o">|</span>  <span class="mi">1</span> <span class="o">|</span>           <span class="o">|</span> <span class="mi">1234</span> <span class="n">fake</span> <span class="n">st</span><span class="o">.</span>   <span class="o">|</span> <span class="n">detroit</span> <span class="o">|</span> <span class="n">mi</span>    <span class="o">|</span> <span class="n">united</span> <span class="n">states</span> <span class="o">|</span> <span class="mi">00000</span>   <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span>           <span class="mi">1</span> <span class="o">|</span>          <span class="mi">1</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="mi">5</span> <span class="o">|</span>           <span class="o">|</span> <span class="mi">1234</span> <span class="n">faker</span> <span class="n">st</span><span class="o">.</span>  <span class="o">|</span> <span class="n">detroit</span> <span class="o">|</span> <span class="n">mi</span>    <span class="o">|</span> <span class="n">united</span> <span class="n">states</span> <span class="o">|</span> <span class="mi">00000</span>   <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span>           <span class="mi">1</span> <span class="o">|</span>          <span class="mi">5</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="mi">6</span> <span class="o">|</span>           <span class="o">|</span> <span class="mi">1234</span> <span class="n">fakest</span> <span class="n">st</span><span class="o">.</span> <span class="o">|</span> <span class="n">detroit</span> <span class="o">|</span> <span class="n">mi</span>    <span class="o">|</span> <span class="n">united</span> <span class="n">states</span> <span class="o">|</span> <span class="mi">00000</span>   <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span>           <span class="mi">1</span> <span class="o">|</span>          <span class="mi">6</span> <span class="o">|</span>
+<span class="o">+----+-----------+-----------------+---------+-------+---------------+---------+---------------------+---------------------+-------------+------------+</span>
+<span class="o">+----------------------+----------------------+----------------------+</span>
+<span class="o">|</span> <span class="n">Home</span> <span class="n">Insurance</span> <span class="n">Agent</span> <span class="o">|</span> <span class="n">Auto</span> <span class="n">Insurance</span> <span class="n">Agent</span> <span class="o">|</span> <span class="n">Life</span> <span class="n">Insurance</span> <span class="n">Agent</span> <span class="o">|</span>
+<span class="o">+----------------------+----------------------+----------------------+</span>
+<span class="o">|</span> <span class="n">arya</span> <span class="n">stark</span>           <span class="o">|</span> <span class="n">arya</span> <span class="n">stark</span>           <span class="o">|</span> <span class="n">arya</span> <span class="n">stark</span>           <span class="o">|</span>
+<span class="o">+----------------------+----------------------+----------------------+</span>
+<span class="o">+-------------------------+-------------------------+-------------------------+</span>
+<span class="o">|</span> <span class="n">Home</span> <span class="n">Insurance</span> <span class="n">Coverage</span> <span class="o">|</span> <span class="n">Auto</span> <span class="n">Insurance</span> <span class="n">Coverage</span> <span class="o">|</span> <span class="n">Life</span> <span class="n">Insurance</span> <span class="n">Coverage</span> <span class="o">|</span>
+<span class="o">+-------------------------+-------------------------+-------------------------+</span>
+<span class="o">|</span>                  <span class="mi">450000</span> <span class="o">|</span>              <span class="mi">1000334000</span> <span class="o">|</span>                  <span class="mi">400000</span> <span class="o">|</span>
+<span class="o">+-------------------------+-------------------------+-------------------------+</span>
+<span class="o">+----+-------------+----------+------------+------+---------------------+---------------------+</span>
+<span class="o">|</span> <span class="nb">id</span> <span class="o">|</span> <span class="n">customer_id</span> <span class="o">|</span> <span class="n">agent_id</span> <span class="o">|</span> <span class="n">premium_id</span> <span class="o">|</span> <span class="nb">type</span> <span class="o">|</span> <span class="n">creation_time</span>       <span class="o">|</span> <span class="n">modification_time</span>   <span class="o">|</span>
+<span class="o">+----+-------------+----------+------------+------+---------------------+---------------------+</span>
+<span class="o">|</span>  <span class="mi">1</span> <span class="o">|</span>           <span class="mi">1</span> <span class="o">|</span>        <span class="mi">1</span> <span class="o">|</span>          <span class="mi">1</span> <span class="o">|</span> <span class="n">home</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="mi">2</span> <span class="o">|</span>           <span class="mi">1</span> <span class="o">|</span>        <span class="mi">1</span> <span class="o">|</span>          <span class="mi">2</span> <span class="o">|</span> <span class="n">auto</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="mi">3</span> <span class="o">|</span>           <span class="mi">1</span> <span class="o">|</span>        <span class="mi">1</span> <span class="o">|</span>          <span class="mi">3</span> <span class="o">|</span> <span class="n">life</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">11</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">30</span> <span class="o">|</span>
+<span class="o">+----+-------------+----------+------------+------+---------------------+---------------------+</span>
+<span class="o">+----------------+------------+</span>
+<span class="o">|</span> <span class="n">Insurance</span> <span class="n">Type</span> <span class="o">|</span> <span class="n">Amount</span> <span class="n">Due</span> <span class="o">|</span>
+<span class="o">+----------------+------------+</span>
+<span class="o">|</span> <span class="n">home</span>           <span class="o">|</span>        <span class="mi">110</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">auto</span>           <span class="o">|</span>    <span class="mi">2823141</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">life</span>           <span class="o">|</span>        <span class="mi">127</span> <span class="o">|</span>
+<span class="o">+----------------+------------+</span>
+<span class="o">+----------------+------------+</span>
+<span class="o">|</span> <span class="n">Insurance</span> <span class="n">Type</span> <span class="o">|</span> <span class="n">Amount</span> <span class="n">Due</span> <span class="o">|</span>
+<span class="o">+----------------+------------+</span>
+<span class="o">|</span> <span class="n">home</span>           <span class="o">|</span>        <span class="mi">110</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">auto</span>           <span class="o">|</span>    <span class="mi">2823141</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">life</span>           <span class="o">|</span>        <span class="mi">127</span> <span class="o">|</span>
+<span class="o">+----------------+------------+</span>
+<span class="o">+------------+------------+------------+------------+</span>
+<span class="o">|</span> <span class="n">name</span>       <span class="o">|</span> <span class="n">home_rate</span>  <span class="o">|</span> <span class="n">auto_rate</span>  <span class="o">|</span> <span class="n">life_rate</span>  <span class="o">|</span>
+<span class="o">+------------+------------+------------+------------+</span>
+<span class="o">|</span> <span class="n">pwning</span> <span class="n">inc</span> <span class="o">|</span> <span class="mf">0.00025590</span> <span class="o">|</span> <span class="mf">0.00282220</span> <span class="o">|</span> <span class="mf">0.00032990</span> <span class="o">|</span>
+<span class="o">+------------+------------+------------+------------+</span>
+<span class="o">+-------------+------------+</span>
+<span class="o">|</span> <span class="n">policy_type</span> <span class="o">|</span> <span class="n">amount_due</span> <span class="o">|</span>
+<span class="o">+-------------+------------+</span>
+<span class="o">|</span> <span class="n">home</span>        <span class="o">|</span>        <span class="mi">110</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">auto</span>        <span class="o">|</span>    <span class="mi">2823141</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">life</span>        <span class="o">|</span>        <span class="mi">127</span> <span class="o">|</span>
+<span class="o">+-------------+------------+</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="minisql-input">
+<h2>3.3. miniSQL Input<a class="headerlink" href="#minisql-input" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">insert</span> <span class="n">test_scores</span> <span class="mi">94</span> <span class="mi">76</span> <span class="mi">82</span> <span class="mi">79</span><span class="p">;</span>
+<span class="n">retrieve</span> <span class="n">test_scores</span><span class="p">;</span>
+<span class="n">update</span> <span class="n">test_scores</span> <span class="n">a1</span><span class="o">=</span><span class="mi">90</span><span class="p">;</span>
+<span class="n">retrieve</span> <span class="n">test_scores</span><span class="p">;</span>
+<span class="n">update</span> <span class="n">test_scores</span> <span class="n">a1</span><span class="o">=</span><span class="mi">96</span> <span class="n">a2</span><span class="o">=</span><span class="mi">78</span> <span class="n">a3</span><span class="o">=</span><span class="mi">84</span> <span class="n">a4</span><span class="o">=</span><span class="mi">81</span><span class="p">;</span>
+<span class="n">retrieve</span> <span class="n">test_scores</span><span class="p">;</span>
+<span class="n">delete</span> <span class="n">test_scores</span><span class="p">;</span>
+
+<span class="n">insert</span> <span class="n">primes1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span><span class="p">;</span>
+<span class="n">insert</span> <span class="n">primes2</span> <span class="mi">11</span> <span class="mi">13</span> <span class="mi">17</span> <span class="mi">19</span><span class="p">;</span>
+<span class="n">insert</span> <span class="n">primes3</span> <span class="mi">23</span> <span class="mi">29</span> <span class="mi">31</span> <span class="mi">37</span><span class="p">;</span>
+<span class="n">insert</span> <span class="n">primes4</span> <span class="mi">41</span> <span class="mi">43</span> <span class="mi">47</span> <span class="mi">53</span><span class="p">;</span>
+<span class="n">retrieve</span> <span class="o">*</span><span class="p">;</span>
+<span class="n">delete</span> <span class="n">primes1</span><span class="p">;</span>
+<span class="n">retrieve</span> <span class="o">*</span><span class="p">;</span>
+<span class="n">delete</span> <span class="o">*</span><span class="p">;</span>
+<span class="n">retrieve</span> <span class="o">*</span><span class="p">;</span>
+
+<span class="n">retrieve</span> <span class="n">not_here</span><span class="p">;</span>
+<span class="n">delete</span> <span class="n">not_here</span><span class="p">;</span>
+<span class="n">insert</span> <span class="n">bad_query</span><span class="p">;</span>
+<span class="n">update</span> <span class="n">a</span> <span class="n">bad</span> <span class="n">query</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="minisql-output">
+<h2>3.4. miniSQL Output<a class="headerlink" href="#minisql-output" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Query successful! Record created..
+//=============||=============||=============||=============||=============\\
+|| Record Name ||     a1      ||     a2      ||     a3      ||     a4      ||
+|]=============[]=============[]=============[]=============[]=============[|
+|| test_scores ||     94      ||     76      ||     82      ||     79      ||
+\\=============||=============||=============||=============||=============//
+
+Query successful! Record updated..
+//=============||=============||=============||=============||=============\\
+|| Record Name ||     a1      ||     a2      ||     a3      ||     a4      ||
+|]=============[]=============[]=============[]=============[]=============[|
+|| test_scores ||     90      ||     76      ||     82      ||     79      ||
+\\=============||=============||=============||=============||=============//
+
+Query successful! Record updated..
+//=============||=============||=============||=============||=============\\
+|| Record Name ||     a1      ||     a2      ||     a3      ||     a4      ||
+|]=============[]=============[]=============[]=============[]=============[|
+|| test_scores ||     96      ||     78      ||     82      ||     79      ||
+\\=============||=============||=============||=============||=============//
+
+Query successful! Record created..
+Query successful! Record created..
+Query successful! Record created..
+Query successful! Record created..
+//=============||=============||=============||=============||=============\\
+|| Record Name ||     a1      ||     a2      ||     a3      ||     a4      ||
+|]=============[]=============[]=============[]=============[]=============[|
+||   primes1   ||      2      ||      3      ||      5      ||      7      ||
+||   primes2   ||     11      ||     13      ||     17      ||     19      ||
+||   primes3   ||     23      ||     29      ||     31      ||     37      ||
+||   primes4   ||     41      ||     43      ||     47      ||     53      ||
+\\=============||=============||=============||=============||=============//
+
+//=============||=============||=============||=============||=============\\
+|| Record Name ||     a1      ||     a2      ||     a3      ||     a4      ||
+|]=============[]=============[]=============[]=============[]=============[|
+||   primes2   ||     11      ||     13      ||     17      ||     19      ||
+||   primes3   ||     23      ||     29      ||     31      ||     37      ||
+||   primes4   ||     41      ||     43      ||     47      ||     53      ||
+\\=============||=============||=============||=============||=============//
+
+[WARNING]: Query returned 0 results..
+[WARNING]: Query returned 0 results..
+[ERROR]: record does not exist
+[ERROR]: insert command requires 4 values
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">miniSQL</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">1. Project Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database_description.html">2. Database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Test Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage_format.html">4. Storage Specification</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="database_description.html" title="previous chapter">2. Database</a></li>
+      <li>Next: <a href="storage_format.html" title="next chapter">4. Storage Specification</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, DevOpSec.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/test_input.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
