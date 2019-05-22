@@ -1,0 +1,22 @@
+insert test_scores 94 76 82 79;
+retrieve test_scores;
+update test_scores a1=90;
+retrieve test_scores;
+update test_scores a1=96 a2=78 a3=84 a4=81;
+retrieve test_scores;
+delete test_scores;
+
+insert primes1 2 3 5 7;
+insert primes2 11 13 17 19;
+insert primes3 23 29 31 37;
+insert primes4 41 43 47 53;
+retrieve *;
+delete primes1;
+retrieve *;
+delete *;
+retrieve *;
+
+retrieve not_here;
+delete not_here;
+insert bad_query;
+update a bad query;
