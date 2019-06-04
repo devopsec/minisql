@@ -2,6 +2,19 @@
 
 
 
+### Add Demo and Final Setup
+
+> Branches Affected: master  
+> Tags Affected:   
+> Date: Tue, 4 Jun 2019 15:46:36 -0400  
+> Author: Tyler Moore (tmoore@goflyball.com)  
+> Committer: Tyler Moore (tmoore@goflyball.com)  
+
+
+
+---
+
+
 ### Temporarily add docs
 
 > Branches Affected: master  

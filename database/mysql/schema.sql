@@ -47,7 +47,7 @@ CREATE TABLE customer (
   CONSTRAINT FOREIGN KEY (address_id) REFERENCES address (id)
 );
 
-DROP TABLE IF EXISTS address_records;
+DROP TABLE IF EXISTS customer_address_records;
 CREATE TABLE address_records (
   customer_id INT(11) NOT NULL,
   address_id INT(11) NOT NULL,
@@ -56,25 +56,25 @@ CREATE TABLE address_records (
   CONSTRAINT FOREIGN KEY (address_id) REFERENCES address (id)
 );
 
--- create address_record when customer address created
-DROP TRIGGER IF EXISTS insert_address_record;
-DELIMITER //
-CREATE TRIGGER insert_address_record AFTER INSERT ON customer
-  FOR EACH ROW
-  BEGIN
-    INSERT IGNORE INTO address_records VALUES (NEW.id, NEW.address_id);
-  END;//
-DELIMITER ;
-
--- create address_record when customer address updated
-DROP TRIGGER IF EXISTS update_address_record;
-DELIMITER //
-CREATE TRIGGER update_address_record AFTER UPDATE ON customer
-  FOR EACH ROW
-  BEGIN
-    INSERT IGNORE INTO address_records VALUES (NEW.id, NEW.address_id);
-  END;//
-DELIMITER ;
+# -- create address_record when customer address created
+# DROP TRIGGER IF EXISTS insert_address_record;
+# DELIMITER //
+# CREATE TRIGGER insert_address_record AFTER INSERT ON customer
+#   FOR EACH ROW
+#   BEGIN
+#     INSERT IGNORE INTO address_records VALUES (NEW.id, NEW.address_id);
+#   END;//
+# DELIMITER ;
+#
+# -- create address_record when customer address updated
+# DROP TRIGGER IF EXISTS update_address_record;
+# DELIMITER //
+# CREATE TRIGGER update_address_record AFTER UPDATE ON customer
+#   FOR EACH ROW
+#   BEGIN
+#     INSERT IGNORE INTO address_records VALUES (NEW.id, NEW.address_id);
+#   END;//
+# DELIMITER ;
 
 DROP TABLE IF EXISTS premium;
 CREATE TABLE premium (
