@@ -36,8 +36,14 @@ DROP TABLE IF EXISTS customer;
 CREATE TABLE customer (
   id INT(11) NOT NULL AUTO_INCREMENT,
   address_id INT(11) NOT NULL,
+
+
+
   name VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL,
+
+
+
+
   phone VARCHAR(255) NOT NULL,
   dob DATE NOT NULL,
   sex VARCHAR(255) NOT NULL, -- male | female | other

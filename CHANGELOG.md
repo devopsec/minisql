@@ -2,6 +2,19 @@
 
 
 
+### update schema in docs
+
+> Branches Affected: master  
+> Tags Affected:   
+> Date: Wed, 11 Nov 2020 16:53:34 -0500  
+> Author: Tyler Moore (tmoore@goflyball.com)  
+> Committer: Tyler Moore (tmoore@goflyball.com)  
+
+
+
+---
+
+
 ### Add Demo and Final Setup
 
 > Branches Affected: master  
@@ -23,7 +36,6 @@
 > Author: Tyler Moore (tmoore@goflyball.com)  
 > Committer: Tyler Moore (tmoore@goflyball.com)  
 
-- work in progress for linking to live docs in github
 
 
 ---
